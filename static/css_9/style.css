@@ -1,0 +1,9 @@
+.card-img-top {
+    max-height: 300px; /* Adjust as needed */
+   
+  }
+  .banner-product {
+    background-image: 
+    url(img/pageBcg/perfumeBcg.jpg) ;
+    min-height: 60vh;
+}

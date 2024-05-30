@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+  <!-- Header-->
+  <header class="bg-dark py-2">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Perfume Shop </h1>
+            <p class="lead fw-normal text-white-50 mb-0">Welcome to our Shop </p>
+        </div>
+    </div>
+</header>
+<section class="py-5">
+    <div class="container px-4 px-lg-5 mt-5">
+    <form method="POST", href ="{% url 'login' %}">
+        {% csrf_token %}
+        <div class="form-group py-3 ">
+          <input type="text" class="form-control" name="username" placeholder="Enter email">
+        </div>
+        <div class="form-group py-3">
+          <input type="password" class="form-control" name="password" placeholder="Password">
+        </div>
+       
+        <button type="submit" class="btn btn-secondary">Login</button>
+      </form>
+    </div>
+</section>
+{% endblock %}
+

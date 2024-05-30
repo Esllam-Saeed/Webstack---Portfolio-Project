@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block content%}
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for perfume in perfumes %}
+  <div class="col">
+    <div class="card h-100">
+      <img src="{{ perfume.image }}" alt="{{ perfume.name }}" class="card-img-top img-fluid rounded float-start"
+      height="80"
+      >
+      <div class="card-body">
+        <h5 class="card-title">{{ perfume.brand }}</h5>
+        <p class="card-text">$ {{ perfume.price }}</p>
+        <a href="#" class="btn btn-primary">shop now</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}  
+</div>
+
+   
+
+
+{% endblock %}
